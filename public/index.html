@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Mr61 - ทายผลบอลยูโร 2024</title>
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gemimi&display=swap">
+</head>
+<body>
+    <img src="images/logo-maruay.png" alt="ข้อความอธิบายรูปภาพ" width="150" height="150" style="display: block; margin: 0 auto;margin-bottom: -60px;" >
+
+    <div class="container">
+        <h1>MARUAY61 </h1>
+        <h6 class="date">ทายผลบอลยูโร EURO 2024 รอบ 16 ทีมสุดท้าย</h6>
+        <div id="matches"></div>
+    </div>
+
+    <div class="container">
+        <h1>MARUAY61 </h1>
+        <h6 class="date">ทายผลบอลยูโร EURO 2024 รอบก่อนรองชนะเลิศ</h6>
+        <div id="matches"></div>
+    </div>
+
+    <div id="predictionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">ทายผลฟุตบอล</h2>
+            <form id="predictionForm">
+                <div class="form-group">
+                    <div class="team-info">
+                        <label id="teamALabel" for="teamAScore"></label>
+                        <img id="teamAFlag" src="" alt="ธงทีม A" width="50" height="30">
+                    </div>
+                    <input type="text" id="teamAScore" name="teamAScore" placeholder="ทายผล จากทีมเหย้า">
+                </div>
+                <div class="form-group">
+                    <div class="team-info">
+                        <label id="teamBLabel" for="teamBScore"></label>
+                        <img id="teamBFlag" src="" alt="ธงทีม B" width="50" height="30">
+                    </div>
+                    <input type="text" id="teamBScore" name="teamBScore" placeholder="ทายผล จากทีมเยือน">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">เบอร์โทรศัพท์ (ที่สมัครในเว็บ)</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="กรอกเบอร์โทรศัพท์">
+                </div>
+                <div class="form-group">
+                    <h5>*เงื่อนไขความรู้ก่อนทายผลบอล*</h5>
+                    <ul>
+                        <li>ต้องมียอดฝาก รวมทั้งวัน 500 ถึงได้ 1 สิทธิแรก</li>
+                        <li>ลูกค้าฝากมา 500 บาท ได้ 1 สิทธิ์ในการทายผล 1 คู่ (500/1 สิทธิ์)</li>
+                        <li>ลูกค้าฝากมา 1,000 บาท ได้ 2 สิทธิ์ในการทายผล 2 คู่ (แต่ละวันจะมีโปรแกรมแข่งประมาณ 4 คู่)</li>
+                    </ul>
+                </div>
+                <button type="submit" class="submit-btn">ทายผลบอล</button>
+            </form>
+        </div>
+    </div>
+
+    
+  <div id="resultModal" class="modal">
+      <div class="modal-content">
+          <h2> คุนทายผลบอลสำเร็จแล้ว </h2>
+          <p id="resultContent"></p>
+          <button id="closeButton">ปิดหน้านี้</button>
+      </div>
+  </div>
+
+<script src="script.js?v=1.1"></script>
+</body>
+</html>
