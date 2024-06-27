@@ -6,11 +6,13 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
+// ตั้งค่าให้ Express เสิร์ฟไฟล์จากโฟลเดอร์ public
 app.use(express.static('public'));
+app.use(bodyParser.json());
 
+// เสิร์ฟไฟล์ HTML จากโฟลเดอร์ public
 app.get('/', (req, res) => {
-    res.send('Hello, World! This is the root endpoint.');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 app.post('/send-message', async (req, res) => {
