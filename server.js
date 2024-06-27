@@ -9,6 +9,11 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+// เพิ่ม endpoint สำหรับ root path
+app.get('/', (req, res) => {
+    res.send('Hello, World! This is the root endpoint.');
+});
+
 app.post('/send-message', async (req, res) => {
     const { message } = req.body;
     const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
