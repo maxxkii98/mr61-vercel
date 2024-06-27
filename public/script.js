@@ -70,83 +70,83 @@ document.addEventListener('DOMContentLoaded', function() {
 
         {
             teams: "สวิตเซอร์แลนด์ vs อิตาลี",
-            time: "วันที่ 29 มิถุนายน 2024 เวลา 18:00",
+            time: "วันที่ 29 มิถุนายน 2024 เวลา 23:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "สวิตเซอร์แลนด์",
             teamBName: "อิตาลี",
             teamACode: "ch",
             teamBCode: "it",
-            matchDate: new Date("2024-06-29T18:00:00+07:00")
+            matchDate: new Date("2024-06-29T23:00:00+07:00")
         },
         {
             teams: "เยอรมนี vs เดนมาร์ก",
-            time: "วันที่ 29 มิถุนายน 2024 เวลา 21:00",
+            time: "วันที่ 29 มิถุนายน 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "เยอรมนี",
             teamBName: "เดนมาร์ก",
             teamACode: "de",
             teamBCode: "dk",
-            matchDate: new Date("2024-06-29T21:00:00+07:00")
+            matchDate: new Date("2024-06-29T02:00:00+07:00")
         },
         {
             teams: "อังกฤษ vs เนเธอร์แลนด์",
-            time: "วันที่ 30 มิถุนายน 2024 เวลา 18:00",
+            time: "วันที่ 30 มิถุนายน 2024 เวลา 23:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "อังกฤษ",
             teamBName: "เนเธอร์แลนด์",
             teamACode: "gb",
             teamBCode: "nl",
-            matchDate: new Date("2024-06-30T18:00:00+07:00")
+            matchDate: new Date("2024-06-30T23:00:00+07:00")
         },
         {
             teams: "สเปน vs เนเธอร์แลนด์",
-            time: "วันที่ 30 มิถุนายน 2024 เวลา 21:00",
+            time: "วันที่ 30 มิถุนายน 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "สเปน",
             teamBName: "เนเธอร์แลนด์",
             teamACode: "es",
             teamBCode: "nl",
-            matchDate: new Date("2024-06-30T21:00:00+07:00")
+            matchDate: new Date("2024-06-30T02:00:00+07:00")
         },
         {
-            teams: "ฝรั่งเศส vs ทีมที่ 2 จากกลุ่ม E",
-            time: "วันที่ 1 กรกฎาคม 2024 เวลา 18:00",
+            teams: "ฝรั่งเศส vs เบลเยียม",
+            time: "วันที่ 1 กรกฎาคม 2024 เวลา 23:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "ฝรั่งเศส",
-            teamBName: "ทีมที่ 2 จากกลุ่ม E",
+            teamBName: "เบลเยียม",
             teamACode: "fr",
-            teamBCode: "2e",
-            matchDate: new Date("2024-07-01T18:00:00+07:00")
+            teamBCode: "be",
+            matchDate: new Date("2024-07-01T23:00:00+07:00")
         },
         {
             teams: "โปรตุเกส vs สโลวีเนีย",
-            time: "วันที่ 1 กรกฎาคม 2024 เวลา 21:00",
+            time: "วันที่ 1 กรกฎาคม 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "โปรตุเกส",
             teamBName: "สโลวีเนีย",
             teamACode: "pt",
             teamBCode: "si",
-            matchDate: new Date("2024-07-01T21:00:00+07:00")
+            matchDate: new Date("2024-07-01T02:00:00+07:00")
         },
         {
-            teams: "ทีมที่ 1 จากกลุ่ม E vs เนเธอร์แลนด์",
-            time: "วันที่ 2 กรกฎาคม 2024 เวลา 18:00",
+            teams: "โรมาเนีย vs เนเธอร์แลนด์",
+            time: "วันที่ 2 กรกฎาคม 2024 เวลา 23:00",
             liveUrl: "https://maruay61.win/",
-            teamAName: "ทีมที่ 1 จากกลุ่ม E",
+            teamAName: "โรมาเนีย",
             teamBName: "เนเธอร์แลนด์",
             teamACode: "1e",
             teamBCode: "nl",
-            matchDate: new Date("2024-07-02T18:00:00+07:00")
+            matchDate: new Date("2024-07-02T23:00:00+07:00")
         },
         {
-            teams: "ออสเตรีย vs ทีมที่ 2 จากกลุ่ม F",
-            time: "วันที่ 2 กรกฎาคม 2024 เวลา 21:00",
+            teams: "ออสเตรีย vs ตุรกี",
+            time: "วันที่ 2 กรกฎาคม 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "ออสเตรีย",
-            teamBName: "ทีมที่ 2 จากกลุ่ม F",
-            teamACode: "at",
-            teamBCode: "2f",
-            matchDate: new Date("2024-07-02T21:00:00+07:00")
+            teamBName: "ตุรกี",
+            teamACode: "ro",
+            teamBCode: "tr",
+            matchDate: new Date("2024-07-02T02:00:00+07:00")
         }
     ];
 
