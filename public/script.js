@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const matches = [
         {
             teams: "Test A vs Test B",
-            time: "วันที่ 27 มิถุนายน 2024 เวลา 18:00",
+            time: "วันที่ 27 มิถุนายน 2024 เวลา 23:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "สวิตเซอร์แลนด์",
             teamBName: "อิตาลี",
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             teams: "Test C vs Test D",
-            time: "วันที่ 27 มิถุนายน 2024 เวลา 18:00",
+            time: "วันที่ 28 มิถุนายน 2024 เวลา 23:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "สวิตเซอร์แลนด์",
             teamBName: "อิตาลี",
