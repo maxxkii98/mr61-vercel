@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
             liveUrl: "https://maruay61.win/",
             teamAName: "โรมาเนีย",
             teamBName: "เนเธอร์แลนด์",
-            teamACode: "1e",
+            teamACode: "ro",
             teamBCode: "nl",
             matchDate: new Date("2024-07-02T23:00:00+07:00")
         },
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
             liveUrl: "https://maruay61.win/",
             teamAName: "ออสเตรีย",
             teamBName: "ตุรกี",
-            teamACode: "ro",
+            teamACode: "au",
             teamBCode: "tr",
             matchDate: new Date("2024-07-02T02:00:00+07:00")
         }
