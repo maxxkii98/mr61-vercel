@@ -9,7 +9,6 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-// เพิ่ม endpoint สำหรับ root path
 app.get('/', (req, res) => {
     res.send('Hello, World! This is the root endpoint.');
 });
@@ -39,6 +38,8 @@ app.post('/send-message', async (req, res) => {
         });
 
         const data = await response.json();
+
+        console.log("Response from Telegram:", data);
 
         if (data.ok) {
             res.status(200).send('Message sent successfully');
