@@ -30,6 +30,16 @@ body {
   text-align: center;
 }
 
+
+.text-info{
+  color: #011146;
+  font-size: 16px;
+}
+
+li{
+  color: #a50606;
+  font-size: 13px;
+}
 h1{
   text-align: center;
   color: #ffffff;
@@ -154,11 +164,11 @@ button:hover {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto;
+  margin: 20% auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid #79797911;
   width: 80%;
-  max-width: 500px;
+  max-width: 350px;
   position: relative;
   border-radius: 8px;
   text-align: left;
@@ -178,7 +188,7 @@ button:hover {
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .form-group label {
