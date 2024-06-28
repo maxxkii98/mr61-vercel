@@ -48,29 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize matches
     const matches = [
         {
-            teams: "Test C vs Test D",
-            time: "วันที่ 28 มิถุนายน 2024 เวลา 23:00",
-            liveUrl: "https://maruay61.win/",
-            teamAName: "สวิตเซอร์แลนด์",
-            teamBName: "อิตาลี",
-            teamACode: "ch",
-            teamBCode: "it",
-            matchDate: new Date("2024-06-28T23:00:00+07:00")
-        },
-
-        {
-            teams: "Test C vs Test D",
-            time: "วันที่ 29 มิถุนายน 2024 เวลา 02:00",
-            liveUrl: "https://maruay61.win/",
-            teamAName: "สวิตเซอร์แลนด์",
-            teamBName: "อิตาลี",
-            teamACode: "ch",
-            teamBCode: "it",
-            matchDate: new Date("2024-06-29T02:00:00+07:00")
-        },
-
-
-        {
             teams: "สวิตเซอร์แลนด์ vs อิตาลี",
             time: "วันที่ 29 มิถุนายน 2024 เวลา 23:00",
             liveUrl: "https://maruay61.win/",
