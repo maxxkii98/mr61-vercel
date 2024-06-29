@@ -11,17 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
             const teamAScore = document.getElementById('teamAScore').value;
             const teamBScore = document.getElementById('teamBScore').value;
             const phoneNumber = document.getElementById('phoneNumber').value;
-            const teams = document.getElementById('modalTitle').textContent.replace('ทายผลฟุตบอลทีม', '');
+            const teams = document.getElementById('modalTitle').textContent.replace('ทายผลฟุตบอลทีม', '').trim();
             const currentDateTime = new Date().toLocaleString('th-TH', { day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
 
             if (teamAScore && teamBScore && phoneNumber) {
-                const message = `⚽️ ผลทายบอล-MR61 \n${teams.split(' vs ')[0]} vs ${teams.split(' vs ')[1]}\n${teams.split(' vs ')[0]}: ${teamAScore}\n${teams.split(' vs ')[1]}: ${teamBScore}\n☎️เบอร์โทรศัพท์: ${phoneNumber}\n⏱️วันที่ทายผล: ${currentDateTime}`;
+                const teamNames = teams.split(' vs ');
+                const message = `⚽️ ผลทายบอล-MR61 \n${teamNames[0]} vs ${teamNames[1]}\n${teamNames[0]}: ${teamAScore}\n${teamNames[1]}: ${teamBScore}\n☎️เบอร์โทรศัพท์: ${phoneNumber}\n⏱️วันที่ทายผล: ${currentDateTime}`;
                 
                 sendToServer(message);
 
                 document.getElementById('resultContent').innerHTML = message.replace(/\n/g, '<br>');
-                resultModal.style.display = 'block';
-                modal.style.display = 'none';
+                document.getElementById('resultModal').style.display = 'block';
+                document.getElementById('predictionModal').style.display = 'none';
             } else {
                 alert('กรุณากรอกข้อมูลให้ครบถ้วน');
             }
@@ -68,23 +69,23 @@ document.addEventListener('DOMContentLoaded', function() {
             matchDate: new Date("2024-06-29T22:00:00+07:00")
         },
         {
-            teams: "อังกฤษ vs เนเธอร์แลนด์",
+            teams: "อังกฤษ vs สโลวาเกีย",
             time: "วันที่ 30 มิถุนายน 2024 เวลา 23:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "อังกฤษ",
-            teamBName: "เนเธอร์แลนด์",
+            teamBName: "สโลวาเกีย",
             teamACode: "gb",
-            teamBCode: "nl",
+            teamBCode: "sk",
             matchDate: new Date("2024-06-30T22:00:00+07:00")
         },
         {
-            teams: "สเปน vs เนเธอร์แลนด์",
+            teams: "สเปน vs จอร์เจีย",
             time: "วันที่ 01 มิถุนายน 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "สเปน",
-            teamBName: "เนเธอร์แลนด์",
+            teamBName: "จอร์เจีย",
             teamACode: "es",
-            teamBCode: "nl",
+            teamBCode: "ge",
             matchDate: new Date("2024-06-30T22:00:00+07:00")
         },
         {
@@ -193,10 +194,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
-
 function openModal(teams, teamAFlag, teamBFlag, teamAName, teamBName) {
-    document.getElementById('modalTitle').innerHTML = `ทายผลฟุตบอลทีม`;
+    document.getElementById('modalTitle').innerHTML = `ทายผลฟุตบอลทีม ${teams}`;
     document.getElementById('teamAFlag').src = teamAFlag;
     document.getElementById('teamBFlag').src = teamBFlag;
     document.getElementById('teamALabel').textContent = `${teamAName} `;
