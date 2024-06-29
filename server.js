@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
+const axios = require('axios');
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
 
@@ -100,6 +101,53 @@ client.connect()
                 res.status(500).send(`Error sending message: ${error.message}`);
             }
         });
+
+        // ฟังก์ชันสำหรับดึงข้อมูลการแข่งขันจาก API
+        async function fetchMatchData() {
+            const apiToken = '41031e360ecc4752b488492a92247b58'; // ใส่ API token ของคุณที่นี่
+            const url = `https://api.football-data.org/v2/matches`; // ตัวอย่าง URL API
+            const headers = { 'X-Auth-Token': apiToken };
+
+            try {
+                const response = await axios.get(url, { headers });
+                console.log('Fetched match data:', response.data);
+                return response.data.matches;
+            } catch (error) {
+                console.error('Error fetching match data:', error);
+                return [];
+            }
+        }
+
+        // อัปเดตสถานะการแข่งขันในฐานข้อมูล
+        async function updateMatchStatus() {
+            console.log('Running updateMatchStatus...');
+            const matches = await fetchMatchData();
+            console.log('Matches:', matches);
+
+            for (const match of matches) {
+                const { homeTeam, awayTeam, status, score } = match;
+                console.log(`Processing match: ${homeTeam.name} vs ${awayTeam.name}, status: ${status}`);
+
+                if (status === 'IN_PLAY' || status === 'PAUSED') {
+                    // ถ้ามีการแข่งขันที่กำลังเล่นอยู่
+                    await predictionsCollection.updateMany(
+                        { teams: new RegExp(`^${homeTeam.name} vs ${awayTeam.name}$`, 'i'), status: 'pending' },
+                        { $set: { status: 'รอข้อมูล Score' } }
+                    );
+                } else if (status === 'FINISHED') {
+                    // ถ้ามีการแข่งขันที่จบแล้ว
+                    const matchStatus = score.winner === 'HOME_TEAM' ? 'win' : (score.winner === 'AWAY_TEAM' ? 'lose' : 'draw');
+
+                    await predictionsCollection.updateMany(
+                        { teams: new RegExp(`^${homeTeam.name} vs ${awayTeam.name}$`, 'i') },
+                        { $set: { status: matchStatus } }
+                    );
+                }
+            }
+        }
+
+        // รันฟังก์ชันอัปเดตสถานะการแข่งขันทุก ๆ 5 นาที
+        setInterval(updateMatchStatus, 300000);
 
         // API ดึงข้อมูลการทายผลทั้งหมด
         app.get('/api/get-predictions', async (req, res) => {
