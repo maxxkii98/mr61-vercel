@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function sendToServer(payload) {
+        console.log('Sending payload:', payload); // เพิ่มการบันทึกข้อมูลที่กำลังจะส่ง
         fetch('/send-message', {
             method: 'POST',
             headers: {
