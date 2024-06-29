@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "อิตาลี",
             teamACode: "ch",
             teamBCode: "it",
-            matchDate: new Date("2024-06-29T23:00:00+07:00")
+            matchDate: new Date("2024-06-29T22:00:00+07:00")
         },
         {
             teams: "เยอรมนี vs เดนมาร์ก",
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "เดนมาร์ก",
             teamACode: "de",
             teamBCode: "dk",
-            matchDate: new Date("2024-06-30T02:00:00+07:00")
+            matchDate: new Date("2024-06-29T22:00:00+07:00")
         },
         {
             teams: "อังกฤษ vs เนเธอร์แลนด์",
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "เนเธอร์แลนด์",
             teamACode: "gb",
             teamBCode: "nl",
-            matchDate: new Date("2024-06-30T23:00:00+07:00")
+            matchDate: new Date("2024-06-30T22:00:00+07:00")
         },
         {
             teams: "สเปน vs เนเธอร์แลนด์",
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "เนเธอร์แลนด์",
             teamACode: "es",
             teamBCode: "nl",
-            matchDate: new Date("2024-07-01T02:00:00+07:00")
+            matchDate: new Date("2024-06-30T22:00:00+07:00")
         },
         {
             teams: "ฝรั่งเศส vs เบลเยียม",
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "เบลเยียม",
             teamACode: "fr",
             teamBCode: "be",
-            matchDate: new Date("2024-07-01T23:00:00+07:00")
+            matchDate: new Date("2024-07-01T22:00:00+07:00")
         },
         {
             teams: "โปรตุเกส vs สโลวีเนีย",
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "สโลวีเนีย",
             teamACode: "pt",
             teamBCode: "si",
-            matchDate: new Date("2024-07-02T02:00:00+07:00")
+            matchDate: new Date("2024-07-01T22:00:00+07:00")
         },
         {
             teams: "โรมาเนีย vs เนเธอร์แลนด์",
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "เนเธอร์แลนด์",
             teamACode: "ro",
             teamBCode: "nl",
-            matchDate: new Date("2024-07-02T23:00:00+07:00")
+            matchDate: new Date("2024-07-02T22:00:00+07:00")
         },
         {
             teams: "ออสเตรีย vs ตุรกี",
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "ตุรกี",
             teamACode: "au",
             teamBCode: "tr",
-            matchDate: new Date("2024-07-03T02:00:00+07:00")
+            matchDate: new Date("2024-07-02T22:00:00+07:00")
         }
     ];
 
