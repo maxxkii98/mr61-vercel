@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             liveUrl: "https://maruay61.win/",
             teamAName: "อังกฤษ",
             teamBName: "สโลวาเกีย",
-            teamACode: "eng",
+            teamACode: "en",
             teamBCode: "sk",
             matchDate: new Date("2024-07-01T22:00:00+07:00")
         },
