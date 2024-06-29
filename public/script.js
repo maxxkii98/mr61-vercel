@@ -60,45 +60,65 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize matches
     const matches = [
+        // {
+        //     teams: "สวิตเซอร์แลนด์ vs อิตาลี",
+        //     time: "วันที่ 29 มิถุนายน 2024 เวลา 23:00",
+        //     liveUrl: "https://maruay61.win/",
+        //     teamAName: "สวิตเซอร์แลนด์",
+        //     teamBName: "อิตาลี",
+        //     teamACode: "ch",
+        //     teamBCode: "it",
+        //     matchDate: new Date("2024-06-29T22:00:00+07:00")
+        // },
+        // {
+        //     teams: "เยอรมนี vs เดนมาร์ก",
+        //     time: "วันที่ 30 มิถุนายน 2024 เวลา 02:00",
+        //     liveUrl: "https://maruay61.win/",
+        //     teamAName: "เยอรมนี",
+        //     teamBName: "เดนมาร์ก",
+        //     teamACode: "de",
+        //     teamBCode: "dk",
+        //     matchDate: new Date("2024-06-29T22:00:00+07:00")
+        // },
+       // {
+        //     teams: "สวิตเซอร์แลนด์ vs อิตาลี",
+        //     time: "วันที่ 29 มิถุนายน 2024 เวลา 23:00",
+        //     liveUrl: "https://maruay61.win/",
+        //     teamAName: "สวิตเซอร์แลนด์",
+        //     teamBName: "อิตาลี",
+        //     teamACode: "ch",
+        //     teamBCode: "it",
+        //     matchDate: new Date("2024-06-29T22:00:00+07:00")
+        // },
+        // {
+        //     teams: "เยอรมนี vs เดนมาร์ก",
+        //     time: "วันที่ 30 มิถุนายน 2024 เวลา 02:00",
+        //     liveUrl: "https://maruay61.win/",
+        //     teamAName: "เยอรมนี",
+        //     teamBName: "เดนมาร์ก",
+        //     teamACode: "de",
+        //     teamBCode: "dk",
+        //     matchDate: new Date("2024-06-29T22:00:00+07:00")
+        // },
         {
-            teams: "สวิตเซอร์แลนด์ vs อิตาลี",
-            time: "วันที่ 29 มิถุนายน 2024 เวลา 23:00",
-            liveUrl: "https://maruay61.win/",
-            teamAName: "สวิตเซอร์แลนด์",
-            teamBName: "อิตาลี",
-            teamACode: "ch",
-            teamBCode: "it",
-            matchDate: new Date("2024-06-29T22:00:00+07:00")
-        },
-        {
-            teams: "เยอรมนี vs เดนมาร์ก",
-            time: "วันที่ 30 มิถุนายน 2024 เวลา 02:00",
-            liveUrl: "https://maruay61.win/",
-            teamAName: "เยอรมนี",
-            teamBName: "เดนมาร์ก",
-            teamACode: "de",
-            teamBCode: "dk",
-            matchDate: new Date("2024-06-29T22:00:00+07:00")
-        },
-        {
-            teams: "อังกฤษ vs เนเธอร์แลนด์",
+            teams: "อังกฤษ vs สโลวาเกีย",
             time: "วันที่ 30 มิถุนายน 2024 เวลา 23:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "อังกฤษ",
-            teamBName: "เนเธอร์แลนด์",
-            teamACode: "gb",
-            teamBCode: "nl",
-            matchDate: new Date("2024-06-30T22:00:00+07:00")
+            teamBName: "สโลวาเกีย",
+            teamACode: "gc",
+            teamBCode: "sk",
+            matchDate: new Date("2024-07-01T22:00:00+07:00")
         },
         {
-            teams: "สเปน vs เนเธอร์แลนด์",
+            teams: "สเปน vs จอร์เจีย",
             time: "วันที่ 01 มิถุนายน 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "สเปน",
-            teamBName: "เนเธอร์แลนด์",
+            teamBName: "จอร์เจีย",
             teamACode: "es",
-            teamBCode: "nl",
-            matchDate: new Date("2024-06-30T22:00:00+07:00")
+            teamBCode: "ge",
+            matchDate: new Date("2024-07-01T22:00:00+07:00")
         },
         {
             teams: "ฝรั่งเศส vs เบลเยียม",
@@ -141,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
             matchDate: new Date("2024-07-02T22:00:00+07:00")
         }
     ];
+
 
     const matchesContainer = document.getElementById('matches');
 
