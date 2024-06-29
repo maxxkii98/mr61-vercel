@@ -16,11 +16,10 @@ app.get('/', (req, res) => {
 
 app.post('/send-message', async (req, res) => {
     const { message } = req.body;
-    // const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
-    // const telegramChatId = process.env.TELEGRAM_CHAT_ID;
-
-    const telegramBotToken = "7050804574:AAHL3PMjevhJPGP3AMJIpvkkZAiyd8lQEOE";
-    const telegramChatId = "-4190025396";
+    const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
+    const telegramChatId = process.env.TELEGRAM_CHAT_ID;
+    // const telegramBotToken = "7050804574:AAHL3PMjevhJPGP3AMJIpvkkZAiyd8lQEOE";
+    // const telegramChatId = "-4190025396";
 
     if (!message || message.trim() === "") {
         res.status(400).send('Message text is empty');
