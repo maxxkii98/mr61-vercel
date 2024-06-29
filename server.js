@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
+const { Pool } = require('pg');
 require('dotenv').config();
 
 const app = express();
@@ -10,12 +11,20 @@ const port = process.env.PORT || 3000;
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
+// ตั้งค่าเชื่อมต่อ PostgreSQL
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
 
 app.post('/send-message', async (req, res) => {
-    const { message } = req.body;
+    const { message, date, teams, teamAScore, teamBScore, status, phoneNumber } = req.body;
     const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
     const telegramChatId = process.env.TELEGRAM_CHAT_ID;
 
@@ -43,7 +52,19 @@ app.post('/send-message', async (req, res) => {
         console.log("Response from Telegram:", data);
 
         if (data.ok) {
-            res.status(200).send('Message sent successfully');
+            // บันทึกข้อมูลการทายผลลงใน PostgreSQL
+            try {
+                const insertQuery = `
+                    INSERT INTO predictions (date, teams, team_a_score, team_b_score, status, phone_number)
+                    VALUES ($1, $2, $3, $4, $5, $6)
+                `;
+                const values = [date, teams, teamAScore, teamBScore, status, phoneNumber];
+                await pool.query(insertQuery, values);
+                res.status(200).send('Message sent and prediction saved successfully');
+            } catch (dbError) {
+                console.error('Error saving prediction:', dbError);
+                res.status(500).send('Error saving prediction');
+            }
         } else {
             console.error('Error sending message:', data);
             res.status(500).send(`Error sending message: ${data.description}`);
@@ -51,6 +72,43 @@ app.post('/send-message', async (req, res) => {
     } catch (error) {
         console.error('Error sending message:', error);
         res.status(500).send(`Error sending message: ${error.message}`);
+    }
+});
+
+// API ดึงข้อมูลการทายผลทั้งหมด
+app.get('/api/get-predictions', async (req, res) => {
+    try {
+        const result = await pool.query('SELECT * FROM predictions');
+        res.json(result.rows);
+    } catch (error) {
+        console.error('Error fetching predictions:', error);
+        res.status(500).send('Error fetching predictions');
+    }
+});
+
+// API ค้นหาการทายผลตามหมายเลขโทรศัพท์
+app.get('/api/search-predictions', async (req, res) => {
+    const phone = req.query.phone;
+    try {
+        const result = await pool.query('SELECT * FROM predictions WHERE phone_number = $1', [phone]);
+        res.json(result.rows);
+    } catch (error) {
+        console.error('Error fetching predictions:', error);
+        res.status(500).send('Error fetching predictions');
+    }
+});
+
+// API กรองการทายผลตามสถานะ
+app.get('/api/filter-predictions', async (req, res) => {
+    const status = req.query.status;
+    try {
+        const query = status === 'all' ? 'SELECT * FROM predictions' : 'SELECT * FROM predictions WHERE status = $1';
+        const values = status === 'all' ? [] : [status];
+        const result = await pool.query(query, values);
+        res.json(result.rows);
+    } catch (error) {
+        console.error('Error fetching predictions:', error);
+        res.status(500).send('Error fetching predictions');
     }
 });
 

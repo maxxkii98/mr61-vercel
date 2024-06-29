@@ -1,18 +1,9 @@
-/* @font-face {
-  font-family: 'Kanit';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.googleapis.com/css2?family=Kanit&display=swap) format('woff2');
-} */
-
-
 @font-face {
   font-family: 'MyCustomFont';
   src: url('fonts/Kanit-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
 
 body {
   font-family: 'MyCustomFont', sans-serif;
@@ -30,7 +21,6 @@ body {
   text-align: center;
 }
 
-
 .text-info{
   color: #011146;
   font-size: 16px;
@@ -40,6 +30,7 @@ li{
   color: #a50606;
   font-size: 13px;
 }
+
 h1{
   text-align: center;
   color: #ffffff;
@@ -251,7 +242,6 @@ button.finished {
     cursor: not-allowed;
 }
 
-
 .loading {
   display: none; /* ซ่อนโดยค่าเริ่มต้น */
   position: fixed;
@@ -269,4 +259,33 @@ button.finished {
 .loading img {
   width: 200px; /* ตั้งค่าขนาดของ GIF */
   height: 200px;
+}
+
+/* Specific styles for admin page */
+.search-container,
+.filter-container {
+  margin: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.result-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: left;
 }

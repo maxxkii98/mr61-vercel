@@ -13,29 +13,40 @@ document.addEventListener('DOMContentLoaded', function() {
             const phoneNumber = document.getElementById('phoneNumber').value;
             const teams = document.getElementById('modalTitle').textContent.replace('ทายผลฟุตบอลทีม', '').trim();
             const currentDateTime = new Date().toLocaleString('th-TH', { day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+            const status = 'pending'; // เปลี่ยนเป็น 'win' หรือ 'lose' ตามที่ต้องการ
 
             if (teamAScore && teamBScore && phoneNumber) {
                 const teamNames = teams.split(' vs ');
                 const message = `⚽️ ผลทายบอล-MR61 \n${teamNames[0]} vs ${teamNames[1]}\n${teamNames[0]}: ${teamAScore}\n${teamNames[1]}: ${teamBScore}\n☎️เบอร์โทรศัพท์: ${phoneNumber}\n⏱️วันที่ทายผล: ${currentDateTime}`;
-                
-                sendToServer(message);
+
+                const payload = {
+                    message: message,
+                    date: new Date().toISOString().split('T')[0], // ส่งวันที่ในรูปแบบ 'YYYY-MM-DD'
+                    teams: teams,
+                    teamAScore: parseInt(teamAScore),
+                    teamBScore: parseInt(teamBScore),
+                    status: status,
+                    phoneNumber: phoneNumber
+                };
+
+                sendToServer(payload);
 
                 document.getElementById('resultContent').innerHTML = message.replace(/\n/g, '<br>');
-                document.getElementById('resultModal').style.display = 'block';
-                document.getElementById('predictionModal').style.display = 'none';
+                resultModal.style.display = 'block';
+                modal.style.display = 'none';
             } else {
                 alert('กรุณากรอกข้อมูลให้ครบถ้วน');
             }
         }
     }
 
-    function sendToServer(message) {
+    function sendToServer(payload) {
         fetch('/send-message', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ message })
+            body: JSON.stringify(payload)
         })
         .then(response => response.text())
         .then(data => {
@@ -69,23 +80,23 @@ document.addEventListener('DOMContentLoaded', function() {
             matchDate: new Date("2024-06-29T22:00:00+07:00")
         },
         {
-            teams: "อังกฤษ vs สโลวาเกีย",
+            teams: "อังกฤษ vs เนเธอร์แลนด์",
             time: "วันที่ 30 มิถุนายน 2024 เวลา 23:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "อังกฤษ",
-            teamBName: "สโลวาเกีย",
+            teamBName: "เนเธอร์แลนด์",
             teamACode: "gb",
-            teamBCode: "sk",
+            teamBCode: "nl",
             matchDate: new Date("2024-06-30T22:00:00+07:00")
         },
         {
-            teams: "สเปน vs จอร์เจีย",
+            teams: "สเปน vs เนเธอร์แลนด์",
             time: "วันที่ 01 มิถุนายน 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "สเปน",
-            teamBName: "จอร์เจีย",
+            teamBName: "เนเธอร์แลนด์",
             teamACode: "es",
-            teamBCode: "ge",
+            teamBCode: "nl",
             matchDate: new Date("2024-06-30T22:00:00+07:00")
         },
         {
