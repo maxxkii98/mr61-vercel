@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
             liveUrl: "https://maruay61.win/",
             teamAName: "อังกฤษ",
             teamBName: "สโลวาเกีย",
-            teamACode: "en",
+            teamACode: "cy",
             teamBCode: "sk",
-            matchDate: new Date("2024-07-01T22:00:00+07:00")
+            matchDate: new Date("2024-06-30T22:00:00+07:00")
         },
         {
             teams: "สเปน vs จอร์เจีย",

@@ -16,7 +16,7 @@
 
 body {
   font-family: 'MyCustomFont', sans-serif;
-  background-image: linear-gradient(to right, #000682, #0044cc);
+  background-image: linear-gradient(to right, #a50606, #a50606);
   margin: 0;
   padding: 0;
 }
@@ -58,7 +58,7 @@ p {
   text-align: center;
   margin-bottom:20px;
   font-size: 20px;
-  margin-top: -23px;
+  margin-top: -3px;
 }
 
 #matches {
@@ -120,21 +120,23 @@ button {
 }
 
 button.predict-btn {
-  background-color: #031191;
+  background-color: #c71e12;
   color: white;
   font-family: 'MyCustomFont', sans-serif;
+
 }
 
 #closeButton{
-  background-color: #a50606;
+  background-color: #ca5757;
   color: white;
   font-family: 'MyCustomFont', sans-serif;
 }
 
 button.live-btn {
-  background-color: #a50606;
-  color: white;
+  background-image: linear-gradient(to top, #eed80f, #ffd000);
+  color: rgb(0, 0, 0);
   font-family: 'MyCustomFont', sans-serif;
+  font-weight: 500;
 }
 
 #closeButton {
