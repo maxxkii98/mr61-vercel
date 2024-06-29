@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Admin - ทายผลบอล</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin - ทายผลบอล</h1>
+        <div class="search-container">
+            <input type="text" id="searchPhone" placeholder="ค้นหาด้วยหมายเลขโทรศัพท์">
+            <button onclick="searchByPhone()">ค้นหา</button>
+        </div>
+        <div class="filter-container">
+            <label for="statusFilter">กรองสถานะ:</label>
+            <select id="statusFilter" onchange="filterStatus()">
+                <option value="all">ทั้งหมด</option>
+                <option value="win">ชนะ</option>
+                <option value="lose">แพ้</option>
+            </select>
+        </div>
+        <div id="results"></div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

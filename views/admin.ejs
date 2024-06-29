@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Admin Page</h1>
+        <form class="form-inline mb-4" method="GET" action="/admin">
+            <div class="form-group mr-2">
+                <label for="phone" class="sr-only">ค้นหาด้วยหมายเลขโทรศัพท์:</label>
+                <input type="text" id="phone" name="phone" class="form-control" placeholder="หมายเลขโทรศัพท์">
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">ค้นหา</button>
+            <div class="form-group">
+                <label for="status" class="mr-2">กรองตามสถานะ:</label>
+                <select id="status" name="status" class="form-control">
+                    <option value="all">ทั้งหมด</option>
+                    <option value="pending">รอดำเนินการ</option>
+                    <option value="win">ชนะ</option>
+                    <option value="lose">แพ้</option>
+                    <option value="draw">เสมอ</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-secondary ml-2">กรอง</button>
+        </form>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>วันที่ทายผล</th>
+                    <th>ทีมทายผล</th>
+                    <th>Score ทายผล</th>
+                    <th>สถานะ</th>
+                    <th>หมายเลขโทรศัพท์</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% predictions.forEach(prediction => { %>
+                    <tr>
+                        <td><%= prediction.date %></td>
+                        <td><%= prediction.teams %></td>
+                        <td><%= prediction.team_a_score %> : <%= prediction.team_b_score %></td>
+                        <td><%= prediction.status %></td>
+                        <td><%= prediction.phone_number %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
