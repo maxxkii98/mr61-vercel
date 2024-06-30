@@ -67,27 +67,27 @@ document.addEventListener('DOMContentLoaded', function() {
         //     teamACode: "de",
         //     teamBCode: "dk",
         //     matchDate: new Date("2024-06-29T22:00:00+07:00")
+        // // },
+        // {
+        //     teams: "อังกฤษ vs สโลวาเกีย",
+        //     time: "วันที่ 30 มิถุนายน 2024 เวลา 23:00",
+        //     liveUrl: "https://m.aver24.xyz/",
+        //     teamAName: "อังกฤษ",
+        //     teamBName: "สโลวาเกีย",
+        //     teamACode: "cy",
+        //     teamBCode: "sk",
+        //     matchDate: new Date("2024-06-30T22:00:00+07:00")
         // },
-        {
-            teams: "อังกฤษ vs สโลวาเกีย",
-            time: "วันที่ 30 มิถุนายน 2024 เวลา 23:00",
-            liveUrl: "https://m.aver24.xyz/",
-            teamAName: "อังกฤษ",
-            teamBName: "สโลวาเกีย",
-            teamACode: "cy",
-            teamBCode: "sk",
-            matchDate: new Date("2024-06-30T22:00:00+07:00")
-        },
-        {
-            teams: "สเปน vs จอร์เจีย",
-            time: "วันที่ 01 กรกฏาคม 2024 เวลา 02:00",
-            liveUrl: "https://m.aver24.xyz/",
-            teamAName: "สเปน",
-            teamBName: "จอร์เจีย",
-            teamACode: "es",
-            teamBCode: "ge",
-            matchDate: new Date("2024-07-01T22:00:00+07:00")
-        },
+        // {
+        //     teams: "สเปน vs จอร์เจีย",
+        //     time: "วันที่ 01 กรกฏาคม 2024 เวลา 02:00",
+        //     liveUrl: "https://m.aver24.xyz/",
+        //     teamAName: "สเปน",
+        //     teamBName: "จอร์เจีย",
+        //     teamACode: "es",
+        //     teamBCode: "ge",
+        //     matchDate: new Date("2024-07-01T22:00:00+07:00")
+        // },
         {
             teams: "ฝรั่งเศส vs เบลเยียม",
             time: "วันที่ 01 กรกฎาคม 2024 เวลา 23:00",
