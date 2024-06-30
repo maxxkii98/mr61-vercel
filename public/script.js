@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (teamAScore && teamBScore && phoneNumber) {
                 const teamNames = teams.split(' vs ');
-                const message = `⚽️ ผลทายบอล-MR61 \n${teamNames[0]} vs ${teamNames[1]}\n${teamNames[0]}: ${teamAScore}\n${teamNames[1]}: ${teamBScore}\n☎️เบอร์โทรศัพท์: ${phoneNumber}\n⏱️วันที่ทายผล: ${currentDateTime}`;
+                const message = `⚽️ ผลทายบอล-AVER24\n${teamNames[0]} vs ${teamNames[1]}\n${teamNames[0]}: ${teamAScore}\n${teamNames[1]}: ${teamBScore}\n☎️เบอร์โทรศัพท์: ${phoneNumber}\n⏱️วันที่ทายผล: ${currentDateTime}`;
                 
                 sendToServer(message);
 
