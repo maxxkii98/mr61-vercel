@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // {
         //     teams: "สวิตเซอร์แลนด์ vs อิตาลี",
         //     time: "วันที่ 29 มิถุนายน 2024 เวลา 23:00",
-        //     liveUrl: "https://maruay61.win/",
+        //     liveUrl: "https://m.aver24.xyz/",
         //     teamAName: "สวิตเซอร์แลนด์",
         //     teamBName: "อิตาลี",
         //     teamACode: "ch",
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // {
         //     teams: "เยอรมนี vs เดนมาร์ก",
         //     time: "วันที่ 30 มิถุนายน 2024 เวลา 02:00",
-        //     liveUrl: "https://maruay61.win/",
+        //     liveUrl: "https://m.aver24.xyz/",
         //     teamAName: "เยอรมนี",
         //     teamBName: "เดนมาร์ก",
         //     teamACode: "de",
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             teams: "อังกฤษ vs สโลวาเกีย",
             time: "วันที่ 30 มิถุนายน 2024 เวลา 23:00",
-            liveUrl: "https://maruay61.win/",
+            liveUrl: "https://m.aver24.xyz/",
             teamAName: "อังกฤษ",
             teamBName: "สโลวาเกีย",
             teamACode: "cy",
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             teams: "สเปน vs จอร์เจีย",
             time: "วันที่ 01 มิถุนายน 2024 เวลา 02:00",
-            liveUrl: "https://maruay61.win/",
+            liveUrl: "https://m.aver24.xyz/",
             teamAName: "สเปน",
             teamBName: "จอร์เจีย",
             teamACode: "es",
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             teams: "ฝรั่งเศส vs เบลเยียม",
             time: "วันที่ 01 กรกฎาคม 2024 เวลา 23:00",
-            liveUrl: "https://maruay61.win/",
+            liveUrl: "https://m.aver24.xyz/",
             teamAName: "ฝรั่งเศส",
             teamBName: "เบลเยียม",
             teamACode: "fr",
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             teams: "โปรตุเกส vs สโลวีเนีย",
             time: "วันที่ 02 กรกฎาคม 2024 เวลา 02:00",
-            liveUrl: "https://maruay61.win/",
+            liveUrl: "https://m.aver24.xyz/",
             teamAName: "โปรตุเกส",
             teamBName: "สโลวีเนีย",
             teamACode: "pt",
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             teams: "โรมาเนีย vs เนเธอร์แลนด์",
             time: "วันที่ 02 กรกฎาคม 2024 เวลา 23:00",
-            liveUrl: "https://maruay61.win/",
+            liveUrl: "https://m.aver24.xyz/",
             teamAName: "โรมาเนีย",
             teamBName: "เนเธอร์แลนด์",
             teamACode: "ro",
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             teams: "ออสเตรีย vs ตุรกี",
             time: "วันที่ 03 กรกฎาคม 2024 เวลา 02:00",
-            liveUrl: "https://maruay61.win/",
+            liveUrl: "https://m.aver24.xyz/",
             teamAName: "ออสเตรีย",
             teamBName: "ตุรกี",
             teamACode: "au",
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="buttons">
                 ${predictButton}
-                <button class="live-btn" onclick="window.open('${match.liveUrl}', 'https://maruay61.win/')">กลับเข้าสู่เว็บไชต์</button>
+                <button class="live-btn" onclick="window.open('${match.liveUrl}', 'https://m.aver24.xyz/')">กลับเข้าสู่เว็บไชต์</button>
             </div>
         `;
 
