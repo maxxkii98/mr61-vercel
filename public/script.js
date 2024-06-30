@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             teams: "สเปน vs จอร์เจีย",
-            time: "วันที่ 01 มิถุนายน 2024 เวลา 02:00",
+            time: "วันที่ 01 กรกฏาคม 2024 เวลา 02:00",
             liveUrl: "https://m.aver24.xyz/",
             teamAName: "สเปน",
             teamBName: "จอร์เจีย",
