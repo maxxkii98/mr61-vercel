@@ -53,8 +53,10 @@ client.connect()
 
         app.post('/send-message', async (req, res) => {
             const { message, date, teams, teamAScore, teamBScore, status, phoneNumber } = req.body;
-            const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
-            const telegramChatId = process.env.TELEGRAM_CHAT_ID;
+            // const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
+            // const telegramChatId = process.env.TELEGRAM_CHAT_ID;
+            //  const telegramBotToken = "7481721981:AAFJCq2WA_Sryg-qNzVwbFh0LN3tiE1tc8w";
+            // const telegramChatId = "5623586184";
 
             console.log('Received data:', req.body);
 
