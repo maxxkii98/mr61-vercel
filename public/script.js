@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (now >= matchDate && now < matchEndDate) {
             predictButton = `<button class="predict-btn expired" disabled>หมดเวลาทาย</button>`;
         } else if (now >= matchEndDate) {
-            predictButton = `<button class="predict-btn finished" disabled>แข่งจบแล้ว</button>`;
+            predictButton = `<button class="predict-btn finished" disabled>หมดเวลาทายผล</button>`;
         } else {
             predictButton = `<button class="predict-btn disabled" disabled>ยังไม่ถึงเวลา</button>`;
         }
