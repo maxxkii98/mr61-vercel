@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "เบลเยียม",
             teamACode: "fr",
             teamBCode: "be",
-            matchDate: new Date("2024-07-02T22:00:00+07:00")
+            matchDate: new Date("2024-07-01T22:00:00+07:00")
         },
         {
             teams: "โปรตุเกส vs สโลวีเนีย",
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "สโลวีเนีย",
             teamACode: "pt",
             teamBCode: "si",
-            matchDate: new Date("2024-07-02T22:00:00+07:00")
+            matchDate: new Date("2024-07-01T22:00:00+07:00")
         },
         {
             teams: "โรมาเนีย vs เนเธอร์แลนด์",
