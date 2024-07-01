@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "เนเธอร์แลนด์",
             teamACode: "ro",
             teamBCode: "nl",
-            matchDate: new Date("2024-07-02T22:00:00+07:00")
+            matchDate: new Date("2024-07-03T22:00:00+07:00")
         },
         {
             teams: "ออสเตรีย vs ตุรกี",
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
             teamBName: "ตุรกี",
             teamACode: "au",
             teamBCode: "tr",
-            matchDate: new Date("2024-07-02T22:00:00+07:00")
+            matchDate: new Date("2024-07-03T22:00:00+07:00")
         }
     ];
 
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (now >= matchDate && now < matchEndDate) {
             predictButton = `<button class="predict-btn expired" disabled>หมดเวลาทาย</button>`;
         } else if (now >= matchEndDate) {
-            predictButton = `<button class="predict-btn finished" disabled>แข่งจบแล้ว</button>`;
+            predictButton = `<button class="predict-btn finished" disabled>หมดเวลาทายผล</button>`;
         } else {
             predictButton = `<button class="predict-btn disabled" disabled>ยังไม่ถึงเวลา</button>`;
         }
