@@ -68,46 +68,46 @@ document.addEventListener('DOMContentLoaded', function() {
         //     teamBCode: "dk",
         //     matchDate: new Date("2024-06-29T22:00:00+07:00")
         // },
-        {
-            teams: "อังกฤษ vs สโลวาเกีย",
-            time: "วันที่ 30 มิถุนายน 2024 เวลา 23:00",
-            liveUrl: "https://maruay61.win/",
-            teamAName: "อังกฤษ",
-            teamBName: "สโลวาเกีย",
-            teamACode: "cy",
-            teamBCode: "sk",
-            matchDate: new Date("2024-06-30T22:00:00+07:00")
-        },
-        {
-            teams: "สเปน vs จอร์เจีย",
-            time: "วันที่ 01 มิถุนายน 2024 เวลา 02:00",
-            liveUrl: "https://maruay61.win/",
-            teamAName: "สเปน",
-            teamBName: "จอร์เจีย",
-            teamACode: "es",
-            teamBCode: "ge",
-            matchDate: new Date("2024-07-01T22:00:00+07:00")
-        },
-        {
-            teams: "ฝรั่งเศส vs เบลเยียม",
-            time: "วันที่ 01 กรกฎาคม 2024 เวลา 23:00",
-            liveUrl: "https://maruay61.win/",
-            teamAName: "ฝรั่งเศส",
-            teamBName: "เบลเยียม",
-            teamACode: "fr",
-            teamBCode: "be",
-            matchDate: new Date("2024-07-01T22:00:00+07:00")
-        },
-        {
-            teams: "โปรตุเกส vs สโลวีเนีย",
-            time: "วันที่ 02 กรกฎาคม 2024 เวลา 02:00",
-            liveUrl: "https://maruay61.win/",
-            teamAName: "โปรตุเกส",
-            teamBName: "สโลวีเนีย",
-            teamACode: "pt",
-            teamBCode: "si",
-            matchDate: new Date("2024-07-01T22:00:00+07:00")
-        },
+        // {
+        //     teams: "อังกฤษ vs สโลวาเกีย",
+        //     time: "วันที่ 30 มิถุนายน 2024 เวลา 23:00",
+        //     liveUrl: "https://maruay61.win/",
+        //     teamAName: "อังกฤษ",
+        //     teamBName: "สโลวาเกีย",
+        //     teamACode: "cy",
+        //     teamBCode: "sk",
+        //     matchDate: new Date("2024-06-30T22:00:00+07:00")
+        // },
+        // {
+        //     teams: "สเปน vs จอร์เจีย",
+        //     time: "วันที่ 01 มิถุนายน 2024 เวลา 02:00",
+        //     liveUrl: "https://maruay61.win/",
+        //     teamAName: "สเปน",
+        //     teamBName: "จอร์เจีย",
+        //     teamACode: "es",
+        //     teamBCode: "ge",
+        //     matchDate: new Date("2024-07-01T22:00:00+07:00")
+        // },
+        // {
+        //     teams: "ฝรั่งเศส vs เบลเยียม",
+        //     time: "วันที่ 01 กรกฎาคม 2024 เวลา 23:00",
+        //     liveUrl: "https://maruay61.win/",
+        //     teamAName: "ฝรั่งเศส",
+        //     teamBName: "เบลเยียม",
+        //     teamACode: "fr",
+        //     teamBCode: "be",
+        //     matchDate: new Date("2024-07-01T22:00:00+07:00")
+        // },
+        // {
+        //     teams: "โปรตุเกส vs สโลวีเนีย",
+        //     time: "วันที่ 02 กรกฎาคม 2024 เวลา 02:00",
+        //     liveUrl: "https://maruay61.win/",
+        //     teamAName: "โปรตุเกส",
+        //     teamBName: "สโลวีเนีย",
+        //     teamACode: "pt",
+        //     teamBCode: "si",
+        //     matchDate: new Date("2024-07-01T22:00:00+07:00")
+        // },
         {
             teams: "โรมาเนีย vs เนเธอร์แลนด์",
             time: "วันที่ 02 กรกฎาคม 2024 เวลา 23:00",
