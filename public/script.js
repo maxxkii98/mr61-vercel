@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             teams: "โปรตุเกส vs ฝรั่งเศส",
-            time: "วันที่ 02 กรกฎาคม 2024 เวลา 02:00",
+            time: "วันที่ 05 กรกฎาคม 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "โปรตุเกส",
             teamBName: "ฝรั่งเศส",
