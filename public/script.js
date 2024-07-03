@@ -120,45 +120,45 @@ document.addEventListener('DOMContentLoaded', function() {
         //     teamBCode: "ge",
         //     matchDate: new Date("2024-06-30T22:00:00+07:00")
         // },
-        // {
-        //     teams: "ฝรั่งเศส vs เบลเยียม",
-        //     time: "วันที่ 01 กรกฎาคม 2024 เวลา 23:00",
-        //     liveUrl: "https://maruay61.win/",
-        //     teamAName: "ฝรั่งเศส",
-        //     teamBName: "เบลเยียม",
-        //     teamACode: "fr",
-        //     teamBCode: "be",
-        //     matchDate: new Date("2024-07-01T22:00:00+07:00")
-        // },
-        // {
-        //     teams: "โปรตุเกส vs สโลวีเนีย",
-        //     time: "วันที่ 02 กรกฎาคม 2024 เวลา 02:00",
-        //     liveUrl: "https://maruay61.win/",
-        //     teamAName: "โปรตุเกส",
-        //     teamBName: "สโลวีเนีย",
-        //     teamACode: "pt",
-        //     teamBCode: "si",
-        //     matchDate: new Date("2024-07-01T22:00:00+07:00")
-        // },
         {
-            teams: "โรมาเนีย vs เนเธอร์แลนด์",
-            time: "วันที่ 02 กรกฎาคม 2024 เวลา 23:00",
+            teams: "สเปน vs เยอรมนี",
+            time: "วันที่ 05 กรกฎาคม 2024 เวลา 23:00",
             liveUrl: "https://maruay61.win/",
-            teamAName: "โรมาเนีย",
-            teamBName: "เนเธอร์แลนด์",
-            teamACode: "ro",
-            teamBCode: "nl",
-            matchDate: new Date("2024-07-02T22:00:00+07:00")
+            teamAName: "สเปน",
+            teamBName: "เยอรมนี",
+            teamACode: "es",
+            teamBCode: "de",
+            matchDate: new Date("2024-07-05T22:00:00+07:00")
         },
         {
-            teams: "ออสเตรีย vs ตุรกี",
-            time: "วันที่ 03 กรกฎาคม 2024 เวลา 02:00",
+            teams: "โปรตุเกส vs ฝรั่งเศส",
+            time: "วันที่ 02 กรกฎาคม 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
-            teamAName: "ออสเตรีย",
+            teamAName: "โปรตุเกส",
+            teamBName: "ฝรั่งเศส",
+            teamACode: "pt",
+            teamBCode: "fr",
+            matchDate: new Date("2024-07-05T22:00:00+07:00")
+        },
+        {
+            teams: "อังกฤษ vs สวิตเซอร์แลนด์",
+            time: "วันที่ 06 กรกฎาคม 2024 เวลา 23:00",
+            liveUrl: "https://maruay61.win/",
+            teamAName: "อังกฤษ",
+            teamBName: "สวิตเซอร์แลนด์",
+            teamACode: "gc",
+            teamBCode: "ch",
+            matchDate: new Date("2024-07-05T22:00:00+07:00")
+        },
+        {
+            teams: "เนเธอร์แลนด์ vs ตุรกี",
+            time: "วันที่ 06 กรกฎาคม 2024 เวลา 02:00",
+            liveUrl: "https://maruay61.win/",
+            teamAName: "เนเธอร์แลนด์",
             teamBName: "ตุรกี",
-            teamACode: "au",
+            teamACode: "nl",
             teamBCode: "tr",
-            matchDate: new Date("2024-07-02T22:00:00+07:00")
+            matchDate: new Date("2024-07-05T22:00:00+07:00")
         }
     ];
 
