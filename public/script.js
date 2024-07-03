@@ -109,24 +109,44 @@ document.addEventListener('DOMContentLoaded', function() {
         //     matchDate: new Date("2024-07-01T22:00:00+07:00")
         // },
         {
-            teams: "โรมาเนีย vs เนเธอร์แลนด์",
-            time: "วันที่ 02 กรกฎาคม 2024 เวลา 23:00",
-            liveUrl: "https://m.aver24.xyz/",
-            teamAName: "โรมาเนีย",
-            teamBName: "เนเธอร์แลนด์",
-            teamACode: "ro",
-            teamBCode: "nl",
-            matchDate: new Date("2024-07-02T22:00:00+07:00")
+            teams: "สเปน vs เยอรมนี",
+            time: "วันที่ 05 กรกฎาคม 2024 เวลา 23:00",
+            liveUrl: "https://maruay61.win/",
+            teamAName: "สเปน",
+            teamBName: "เยอรมนี",
+            teamACode: "es",
+            teamBCode: "de",
+            matchDate: new Date("2024-07-05T22:00:00+07:00")
         },
         {
-            teams: "ออสเตรีย vs ตุรกี",
-            time: "วันที่ 03 กรกฎาคม 2024 เวลา 02:00",
-            liveUrl: "https://m.aver24.xyz/",
-            teamAName: "ออสเตรีย",
+            teams: "โปรตุเกส vs ฝรั่งเศส",
+            time: "วันที่ 02 กรกฎาคม 2024 เวลา 02:00",
+            liveUrl: "https://maruay61.win/",
+            teamAName: "โปรตุเกส",
+            teamBName: "ฝรั่งเศส",
+            teamACode: "pt",
+            teamBCode: "fr",
+            matchDate: new Date("2024-07-05T22:00:00+07:00")
+        },
+        {
+            teams: "อังกฤษ vs สวิตเซอร์แลนด์",
+            time: "วันที่ 06 กรกฎาคม 2024 เวลา 23:00",
+            liveUrl: "https://maruay61.win/",
+            teamAName: "อังกฤษ",
+            teamBName: "สวิตเซอร์แลนด์",
+            teamACode: "en",
+            teamBCode: "ch",
+            matchDate: new Date("2024-07-05T22:00:00+07:00")
+        },
+        {
+            teams: "เนเธอร์แลนด์ vs ตุรกี",
+            time: "วันที่ 06 กรกฎาคม 2024 เวลา 02:00",
+            liveUrl: "https://maruay61.win/",
+            teamAName: "เนเธอร์แลนด์",
             teamBName: "ตุรกี",
-            teamACode: "au",
+            teamACode: "nl",
             teamBCode: "tr",
-            matchDate: new Date("2024-07-02T22:00:00+07:00")
+            matchDate: new Date("2024-07-05T22:00:00+07:00")
         }
     ];
 
