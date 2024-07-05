@@ -120,26 +120,26 @@ document.addEventListener('DOMContentLoaded', function() {
         //     teamBCode: "ge",
         //     matchDate: new Date("2024-06-30T22:00:00+07:00")
         // },
-        {
-            teams: "สเปน vs เยอรมนี",
-            time: "วันที่ 05 กรกฎาคม 2024 เวลา 23:00",
-            liveUrl: "https://maruay61.win/",
-            teamAName: "สเปน",
-            teamBName: "เยอรมนี",
-            teamACode: "es",
-            teamBCode: "de",
-            matchDate: new Date("2024-07-05T22:00:00+07:00")
-        },
-        {
-            teams: "โปรตุเกส vs ฝรั่งเศส",
-            time: "วันที่ 05 กรกฎาคม 2024 เวลา 02:00",
-            liveUrl: "https://maruay61.win/",
-            teamAName: "โปรตุเกส",
-            teamBName: "ฝรั่งเศส",
-            teamACode: "pt",
-            teamBCode: "fr",
-            matchDate: new Date("2024-07-05T22:00:00+07:00")
-        },
+        // {
+        //     teams: "สเปน vs เยอรมนี",
+        //     time: "วันที่ 05 กรกฎาคม 2024 เวลา 23:00",
+        //     liveUrl: "https://maruay61.win/",
+        //     teamAName: "สเปน",
+        //     teamBName: "เยอรมนี",
+        //     teamACode: "es",
+        //     teamBCode: "de",
+        //     matchDate: new Date("2024-07-05T22:00:00+07:00")
+        // },
+        // {
+        //     teams: "โปรตุเกส vs ฝรั่งเศส",
+        //     time: "วันที่ 05 กรกฎาคม 2024 เวลา 02:00",
+        //     liveUrl: "https://maruay61.win/",
+        //     teamAName: "โปรตุเกส",
+        //     teamBName: "ฝรั่งเศส",
+        //     teamACode: "pt",
+        //     teamBCode: "fr",
+        //     matchDate: new Date("2024-07-05T22:00:00+07:00")
+        // },
         {
             teams: "อังกฤษ vs สวิตเซอร์แลนด์",
             time: "วันที่ 06 กรกฎาคม 2024 เวลา 23:00",
