@@ -141,24 +141,24 @@ document.addEventListener('DOMContentLoaded', function() {
         //     matchDate: new Date("2024-07-05T22:00:00+07:00")
         // },
         {
-            teams: "อังกฤษ vs สวิตเซอร์แลนด์",
-            time: "วันที่ 06 กรกฎาคม 2024 เวลา 23:00",
+            teams: "สเปน vs ฝรั่งเศส ",
+            time: "วันที่ 10 กรกฎาคม 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
-            teamAName: "อังกฤษ",
-            teamBName: "สวิตเซอร์แลนด์",
-            teamACode: "gc",
-            teamBCode: "ch",
-            matchDate: new Date("2024-07-06T22:00:00+07:00")
+            teamAName: "สเปน",
+            teamBName: "ฝรั่งเศส ",
+            teamACode: "es",
+            teamBCode: "fr",
+            matchDate: new Date("2024-07-09T22:00:00+07:00")
         },
         {
-            teams: "เนเธอร์แลนด์ vs ตุรกี",
-            time: "วันที่ 06 กรกฎาคม 2024 เวลา 02:00",
+            teams: "เนเธอร์แลนด์ vs อังกฤษ  ",
+            time: "วันที่ 11 กรกฎาคม 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "เนเธอร์แลนด์",
-            teamBName: "ตุรกี",
+            teamBName: "อังกฤษ  ",
             teamACode: "nl",
-            teamBCode: "tr",
-            matchDate: new Date("2024-07-06T22:00:00+07:00")
+            teamBCode: "en",
+            matchDate: new Date("2024-07-10T22:00:00+07:00")
         }
     ];
 
