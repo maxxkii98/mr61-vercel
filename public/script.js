@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // },
         {
             teams: "สเปน vs อังกฤษ ",
-            time: "วันที่ 14 กรกฎาคม 2024 เวลา 02:00",
+            time: "คืนวันอาทิตย์ ที่ 14 กรกฎาคม 2024 เวลา 02:00",
             liveUrl: "https://m.aver24.xyz/",
             teamAName: "สเปน",
             teamBName: "อังกฤษ ",
