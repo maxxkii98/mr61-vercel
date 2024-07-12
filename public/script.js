@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const currentDateElement = document.getElementById('currentDate');
     if (currentDateElement) {
         currentDateElement.textContent = new Date().toLocaleDateString('th-TH', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const predictionForm = document.getElementById('predictionForm');
     if (predictionForm) {
-        predictionForm.onsubmit = function(e) {
+        predictionForm.onsubmit = function (e) {
             e.preventDefault();
             const teamAScore = document.getElementById('teamAScore').value;
             const teamBScore = document.getElementById('teamBScore').value;
@@ -49,13 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             body: JSON.stringify(payload)
         })
-        .then(response => response.text())
-        .then(data => {
-            console.log(data);
-        })
-        .catch(error => {
-            console.error('Error sending message:', error);
-        });
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error sending message:', error);
+            });
     }
 
     // Initialize matches
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //     teamBCode: "dk",
         //     matchDate: new Date("2024-06-29T22:00:00+07:00")
         // },
-       // {
+        // {
         //     teams: "สวิตเซอร์แลนด์ vs อิตาลี",
         //     time: "วันที่ 29 มิถุนายน 2024 เวลา 23:00",
         //     liveUrl: "https://maruay61.win/",
@@ -141,25 +141,25 @@ document.addEventListener('DOMContentLoaded', function() {
         //     matchDate: new Date("2024-07-05T22:00:00+07:00")
         // },
         {
-            teams: "สเปน vs ฝรั่งเศส ",
-            time: "วันที่ 10 กรกฎาคม 2024 เวลา 02:00",
+            teams: "สเปน vs อังกฤษ ",
+            time: "วันที่ 14 กรกฎาคม 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "สเปน",
-            teamBName: "ฝรั่งเศส ",
+            teamBName: "อังกฤษ ",
             teamACode: "es",
-            teamBCode: "fr",
-            matchDate: new Date("2024-07-09T22:00:00+07:00")
-        },
-        {
-            teams: "เนเธอร์แลนด์ vs อังกฤษ  ",
-            time: "วันที่ 11 กรกฎาคม 2024 เวลา 02:00",
-            liveUrl: "https://maruay61.win/",
-            teamAName: "เนเธอร์แลนด์",
-            teamBName: "อังกฤษ  ",
-            teamACode: "nl",
             teamBCode: "en",
-            matchDate: new Date("2024-07-10T22:00:00+07:00")
-        }
+            matchDate: new Date("2024-07-13T22:00:00+07:00")
+        },
+        // {
+        //     teams: "เนเธอร์แลนด์ vs อังกฤษ  ",
+        //     time: "วันที่ 11 กรกฎาคม 2024 เวลา 02:00",
+        //     liveUrl: "https://maruay61.win/",
+        //     teamAName: "เนเธอร์แลนด์",
+        //     teamBName: "อังกฤษ  ",
+        //     teamACode: "nl",
+        //     teamBCode: "en",
+        //     matchDate: new Date("2024-07-10T22:00:00+07:00")
+        // }
     ];
 
 
@@ -210,15 +210,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeModalBtn = document.getElementsByClassName('close')[0];
     const closeResultBtn = document.getElementsByClassName('close-result')[0];
 
-    closeModalBtn.onclick = function() {
+    closeModalBtn.onclick = function () {
         modal.style.display = 'none';
     }
 
-    closeResultBtn.onclick = function() {
+    closeResultBtn.onclick = function () {
         resultModal.style.display = 'none';
     }
 
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = 'none';
         } else if (event.target == resultModal) {
