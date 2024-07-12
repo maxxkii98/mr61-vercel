@@ -129,25 +129,25 @@ document.addEventListener('DOMContentLoaded', function() {
         //     matchDate: new Date("2024-07-05T22:00:00+07:00")
         // },
         {
-            teams: "สเปน vs ฝรั่งเศส ",
-            time: "วันที่ 10 กรกฎาคม 2024 เวลา 02:00",
+            teams: "สเปน vs อังกฤษ ",
+            time: "วันที่ 14 กรกฎาคม 2024 เวลา 02:00",
             liveUrl: "https://m.aver24.xyz/",
             teamAName: "สเปน",
-            teamBName: "ฝรั่งเศส ",
+            teamBName: "อังกฤษ ",
             teamACode: "es",
-            teamBCode: "fr",
-            matchDate: new Date("2024-07-09T22:00:00+07:00")
-        },
-        {
-            teams: "เนเธอร์แลนด์ vs อังกฤษ  ",
-            time: "วันที่ 11 กรกฎาคม 2024 เวลา 02:00",
-            liveUrl: "https://m.aver24.xyz/",
-            teamAName: "เนเธอร์แลนด์",
-            teamBName: "อังกฤษ  ",
-            teamACode: "nl",
             teamBCode: "en",
-            matchDate: new Date("2024-07-10T22:00:00+07:00")
-        }
+            matchDate: new Date("2024-07-13T22:00:00+07:00")
+        },
+        // {
+        //     teams: "เนเธอร์แลนด์ vs อังกฤษ  ",
+        //     time: "วันที่ 11 กรกฎาคม 2024 เวลา 02:00",
+        //     liveUrl: "https://m.aver24.xyz/",
+        //     teamAName: "เนเธอร์แลนด์",
+        //     teamBName: "อังกฤษ  ",
+        //     teamACode: "nl",
+        //     teamBCode: "en",
+        //     matchDate: new Date("2024-07-10T22:00:00+07:00")
+        // }
     ];
 
     const matchesContainer = document.getElementById('matches');
