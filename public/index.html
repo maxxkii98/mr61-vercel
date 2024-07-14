@@ -20,30 +20,14 @@
         <div id="matches"></div>
     </div>
 
-    <!-- <div class="container">
-        <h1>MARUAY61 </h1>
-        <h6 class="date">ทายผลบอลยูโร EURO 2024 รอบก่อนรองชนะเลิศ</h6>
-        <div id="matches"></div>
-    </div> -->
-
     <div id="predictionModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 id="modalTitle">ทายผลฟุตบอล</h2>
             <form id="predictionForm">
-                <div class="form-group">
-                    <div class="team-info">
-                        <label id="teamALabel" for="teamAScore"></label>
-                        <img id="teamAFlag" src="" alt="ธงทีม A" width="50" height="30">
-                    </div>
-                    <input type="number" id="teamAScore" name="teamAScore" placeholder="ทายผล จากทีมเหย้า" min="0" max="99">
-                </div>
-                <div class="form-group">
-                    <div class="team-info">
-                        <label id="teamBLabel" for="teamBScore"></label>
-                        <img id="teamBFlag" src="" alt="ธงทีม B" width="50" height="30">
-                    </div>
-                    <input type="number" id="teamBScore" name="teamBScore" placeholder="ทายผล จากทีมเยือน" min="0" max="99">
+                <div class="team-btn-container">
+                    <button type="button" id="teamAButton" class="team-btn"></button>
+                    <button type="button" id="teamBButton" class="team-btn"></button>
                 </div>
                 <div class="form-group">
                     <label for="phoneNumber">เบอร์โทรศัพท์ (ที่สมัครในเว็บ)</label>

@@ -8,23 +8,22 @@ document.addEventListener('DOMContentLoaded', function () {
     if (predictionForm) {
         predictionForm.onsubmit = function (e) {
             e.preventDefault();
-            const teamAScore = document.getElementById('teamAScore').value;
-            const teamBScore = document.getElementById('teamBScore').value;
+            const selectedTeam = document.querySelector('.team-btn.selected');
             const phoneNumber = document.getElementById('phoneNumber').value;
             const teams = document.getElementById('modalTitle').textContent.replace('ทายผลฟุตบอลทีม', '').trim();
             const currentDateTime = new Date().toLocaleString('th-TH', { day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
-            const status = 'pending'; // เปลี่ยนเป็น 'win' หรือ 'lose' ตามที่ต้องการ
+            const status = 'pending';
 
-            if (teamAScore && teamBScore && phoneNumber) {
-                const teamNames = teams.split(' vs ');
-                const message = `⚽️ ผลทายบอล-MR61 \n${teamNames[0]} vs ${teamNames[1]}\n${teamNames[0]}: ${teamAScore}\n${teamNames[1]}: ${teamBScore}\n☎️เบอร์โทรศัพท์: ${phoneNumber}\n⏱️วันที่ทายผล: ${currentDateTime}`;
+            if (selectedTeam && phoneNumber) {
+                const selectedTeamName = selectedTeam.getAttribute('data-team-name');
+                const otherTeamName = selectedTeamName === teams.split(' vs ')[0] ? teams.split(' vs ')[1] : teams.split(' vs ')[0];
+                const message = `⚽️ ผลทายบอล-MR61 \n${teams}\n${selectedTeamName}:  (ชนะ)\n${otherTeamName}: -\n☎️เบอร์โทรศัพท์: ${phoneNumber}\n⏱️วันที่ทายผล: ${currentDateTime}`;
 
                 const payload = {
                     message: message,
-                    date: new Date().toISOString().split('T')[0], // ส่งวันที่ในรูปแบบ 'YYYY-MM-DD'
+                    date: new Date().toISOString().split('T')[0],
                     teams: teams,
-                    teamAScore: parseInt(teamAScore),
-                    teamBScore: parseInt(teamBScore),
+                    selectedTeam: selectedTeamName,
                     status: status,
                     phoneNumber: phoneNumber
                 };
@@ -32,7 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 sendToServer(payload);
 
                 document.getElementById('resultContent').innerHTML = message.replace(/\n/g, '<br>');
+                const resultModal = document.getElementById('resultModal');
                 resultModal.style.display = 'block';
+                const modal = document.getElementById('predictionModal');
                 modal.style.display = 'none';
             } else {
                 alert('กรุณากรอกข้อมูลให้ครบถ้วน');
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function sendToServer(payload) {
-        console.log('Sending payload:', payload); // เพิ่มการบันทึกข้อมูลที่กำลังจะส่ง
+        console.log('Sending payload:', payload);
         fetch('/send-message', {
             method: 'POST',
             headers: {
@@ -58,88 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    // Initialize matches
     const matches = [
-        // {
-        //     teams: "สวิตเซอร์แลนด์ vs อิตาลี",
-        //     time: "วันที่ 29 มิถุนายน 2024 เวลา 23:00",
-        //     liveUrl: "https://maruay61.win/",
-        //     teamAName: "สวิตเซอร์แลนด์",
-        //     teamBName: "อิตาลี",
-        //     teamACode: "ch",
-        //     teamBCode: "it",
-        //     matchDate: new Date("2024-06-29T22:00:00+07:00")
-        // },
-        // {
-        //     teams: "เยอรมนี vs เดนมาร์ก",
-        //     time: "วันที่ 30 มิถุนายน 2024 เวลา 02:00",
-        //     liveUrl: "https://maruay61.win/",
-        //     teamAName: "เยอรมนี",
-        //     teamBName: "เดนมาร์ก",
-        //     teamACode: "de",
-        //     teamBCode: "dk",
-        //     matchDate: new Date("2024-06-29T22:00:00+07:00")
-        // },
-        // {
-        //     teams: "สวิตเซอร์แลนด์ vs อิตาลี",
-        //     time: "วันที่ 29 มิถุนายน 2024 เวลา 23:00",
-        //     liveUrl: "https://maruay61.win/",
-        //     teamAName: "สวิตเซอร์แลนด์",
-        //     teamBName: "อิตาลี",
-        //     teamACode: "ch",
-        //     teamBCode: "it",
-        //     matchDate: new Date("2024-06-29T22:00:00+07:00")
-        // },
-        // {
-        //     teams: "เยอรมนี vs เดนมาร์ก",
-        //     time: "วันที่ 30 มิถุนายน 2024 เวลา 02:00",
-        //     liveUrl: "https://maruay61.win/",
-        //     teamAName: "เยอรมนี",
-        //     teamBName: "เดนมาร์ก",
-        //     teamACode: "de",
-        //     teamBCode: "dk",
-        //     matchDate: new Date("2024-06-29T22:00:00+07:00")
-        // },
-        // {
-        //     teams: "อังกฤษ vs สโลวาเกีย",
-        //     time: "วันที่ 30 มิถุนายน 2024 เวลา 23:00",
-        //     liveUrl: "https://maruay61.win/",
-        //     teamAName: "อังกฤษ",
-        //     teamBName: "สโลวาเกีย",
-        //     teamACode: "gc",
-        //     teamBCode: "sk",
-        //     matchDate: new Date("2024-06-30T22:00:00+07:00")
-        // },
-        // {
-        //     teams: "สเปน vs จอร์เจีย",
-        //     time: "วันที่ 01 กรกฏาคม 2024 เวลา 02:00",
-        //     liveUrl: "https://maruay61.win/",
-        //     teamAName: "สเปน",
-        //     teamBName: "จอร์เจีย",
-        //     teamACode: "es",
-        //     teamBCode: "ge",
-        //     matchDate: new Date("2024-06-30T22:00:00+07:00")
-        // },
-        // {
-        //     teams: "สเปน vs เยอรมนี",
-        //     time: "วันที่ 05 กรกฎาคม 2024 เวลา 23:00",
-        //     liveUrl: "https://maruay61.win/",
-        //     teamAName: "สเปน",
-        //     teamBName: "เยอรมนี",
-        //     teamACode: "es",
-        //     teamBCode: "de",
-        //     matchDate: new Date("2024-07-05T22:00:00+07:00")
-        // },
-        // {
-        //     teams: "โปรตุเกส vs ฝรั่งเศส",
-        //     time: "วันที่ 05 กรกฎาคม 2024 เวลา 02:00",
-        //     liveUrl: "https://maruay61.win/",
-        //     teamAName: "โปรตุเกส",
-        //     teamBName: "ฝรั่งเศส",
-        //     teamACode: "pt",
-        //     teamBCode: "fr",
-        //     matchDate: new Date("2024-07-05T22:00:00+07:00")
-        // },
         {
             teams: "สเปน vs อังกฤษ ",
             time: "วันอาทิตย์ ที่ 14 กรกฎาคม 2024 เวลา 02:00",
@@ -148,20 +68,9 @@ document.addEventListener('DOMContentLoaded', function () {
             teamBName: "อังกฤษ ",
             teamACode: "es",
             teamBCode: "en",
-            matchDate: new Date("2024-07-14T23:00:00+07:00")
-        },
-        // {
-        //     teams: "เนเธอร์แลนด์ vs อังกฤษ  ",
-        //     time: "วันที่ 11 กรกฎาคม 2024 เวลา 02:00",
-        //     liveUrl: "https://maruay61.win/",
-        //     teamAName: "เนเธอร์แลนด์",
-        //     teamBName: "อังกฤษ  ",
-        //     teamACode: "nl",
-        //     teamBCode: "en",
-        //     matchDate: new Date("2024-07-10T22:00:00+07:00")
-        // }
+            matchDate: new Date("2024-07-14T23:50:00+07:00")
+        }
     ];
-
 
     const matchesContainer = document.getElementById('matches');
 
@@ -172,11 +81,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const now = new Date();
         const matchDate = match.matchDate;
         const matchEndDate = new Date(matchDate);
-        matchEndDate.setHours(matchDate.getHours() + 2); // สมมติว่าแต่ละการแข่งขันใช้เวลา 2 ชั่วโมง
+        matchEndDate.setHours(matchDate.getHours() + 2);
 
         let predictButton;
         if (now.toDateString() === matchDate.toDateString() && now < matchDate) {
-            // If today is the match date and the current time is before the match time
             predictButton = `<button class="predict-btn" onclick="openModal('${match.teams}', 'images/64/${match.teamACode}_64.png', 'images/64/${match.teamBCode}_64.png', '${match.teamAName}', '${match.teamBName}')">ทายผล</button>`;
         } else if (now >= matchDate && now < matchEndDate) {
             predictButton = `<button class="predict-btn expired" disabled>หมดเวลาทาย</button>`;
@@ -204,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
         matchesContainer.appendChild(matchCard);
     });
 
-    // Modal functionality
     const modal = document.getElementById('predictionModal');
     const resultModal = document.getElementById('resultModal');
     const closeModalBtn = document.getElementsByClassName('close')[0];
@@ -214,8 +121,10 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = 'none';
     }
 
-    closeResultBtn.onclick = function () {
-        resultModal.style.display = 'none';
+    if (closeResultBtn) {
+        closeResultBtn.onclick = function () {
+            resultModal.style.display = 'none';
+        }
     }
 
     window.onclick = function (event) {
@@ -229,12 +138,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function openModal(teams, teamAFlag, teamBFlag, teamAName, teamBName) {
     document.getElementById('modalTitle').innerHTML = `ทายผลฟุตบอลทีม ${teams}`;
-    document.getElementById('teamAFlag').src = teamAFlag;
-    document.getElementById('teamBFlag').src = teamBFlag;
-    document.getElementById('teamALabel').textContent = `${teamAName} `;
-    document.getElementById('teamBLabel').textContent = `${teamBName} `;
+    const teamAButton = document.getElementById('teamAButton');
+    const teamBButton = document.getElementById('teamBButton');
+
+    teamAButton.innerHTML = `<img src="${teamAFlag}" alt="ธงทีม A"><span>${teamAName}</span>`;
+    teamBButton.innerHTML = `<img src="${teamBFlag}" alt="ธงทีม B"><span>${teamBName}</span>`;
+
+    teamAButton.setAttribute('data-team-name', teamAName);
+    teamBButton.setAttribute('data-team-name', teamBName);
+
+    teamAButton.onclick = function () {
+        selectTeam(teamAButton);
+    };
+    teamBButton.onclick = function () {
+        selectTeam(teamBButton);
+    };
+
     const modal = document.getElementById('predictionModal');
     modal.style.display = 'block';
+}
+
+function selectTeam(button) {
+    const buttons = document.querySelectorAll('.team-btn');
+    buttons.forEach(btn => btn.classList.remove('selected'));
+    button.classList.add('selected');
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -242,7 +169,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     closeButton.addEventListener('click', () => {
         const modal = document.getElementById('resultModal');
-        modal.style.display = 'none'; // ปิด Modal
-        location.reload(); // รีเฟรชหน้าเว็บ
+        modal.style.display = 'none';
+        location.reload();
     });
 });
