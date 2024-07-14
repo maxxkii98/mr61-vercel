@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
             teamBName: "อังกฤษ ",
             teamACode: "es",
             teamBCode: "en",
-            matchDate: new Date("2024-07-14T23:00:00+07:00")
+            matchDate: new Date("2024-07-14T23:50:00+07:00")
         },
         // {
         //     teams: "เนเธอร์แลนด์ vs อังกฤษ  ",
