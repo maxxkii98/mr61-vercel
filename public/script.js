@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // },
         {
             teams: "สเปน vs อังกฤษ ",
-            time: "คืนวันอาทิตย์ ที่ 14 กรกฎาคม 2024 เวลา 02:00",
+            time: "วันอาทิตย์ ที่ 14 กรกฎาคม 2024 เวลา 02:00",
             liveUrl: "https://maruay61.win/",
             teamAName: "สเปน",
             teamBName: "อังกฤษ ",
